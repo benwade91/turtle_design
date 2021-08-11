@@ -5,8 +5,9 @@ tim.shape("turtle")
 tim.penup()
 tim.goto(-50, 150)
 tim.pendown()
-tim.pensize(5)
-colors = ["red", "green", "blue", "orange", "pink", "yellow", "black", "purple", "cyan", "blue", "green"]
+tim.pensize(15)
+colors = ["white", "white", "white", "LightSteelBlue", "SkyBlue", "DarkCyan",
+          "MediumSpringGreen", "Gold", "RosyBrown", "MediumVioletRed", "MediumPurple"]
 
 for i in range(3, 11):
     tim.pencolor(colors[i])
