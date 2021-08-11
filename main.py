@@ -1,21 +1,20 @@
-from turtle import Turtle, Screen
+import turtle
 import random
 
-tim = Turtle()
+tim = turtle.Turtle()
 tim.shape("turtle")
-tim.pensize(10)
-tim.speed(10)
+tim.pensize(2)
+tim.speed(0)
 colors = ["LightSteelBlue", "SkyBlue", "DarkCyan", "MediumSpringGreen", "Gold", "RosyBrown", "MediumVioletRed", "MediumPurple"]
 
-screen = Screen()
-screen.colormode(255)
-
+turtle.colormode(255)
+heading = 0
 for _ in range(100):
     rand_color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
     tim.pencolor(rand_color)
-    tim.setheading(random.randint(0, 360))
-    tim.forward(25)
+    tim.setheading(heading)
+    tim.circle(150)
+    heading += 20
 
-
-
+screen = turtle.Screen()
 screen.exitonclick()
