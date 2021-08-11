@@ -1,20 +1,18 @@
 from turtle import Turtle, Screen
+import random
 
 tim = Turtle()
 tim.shape("turtle")
-tim.penup()
-tim.goto(-50, 150)
-tim.pendown()
-tim.pensize(15)
-colors = ["white", "white", "white", "LightSteelBlue", "SkyBlue", "DarkCyan",
-          "MediumSpringGreen", "Gold", "RosyBrown", "MediumVioletRed", "MediumPurple"]
+tim.pensize(10)
+tim.speed(10)
+colors = ["LightSteelBlue", "SkyBlue", "DarkCyan", "MediumSpringGreen", "Gold", "RosyBrown", "MediumVioletRed", "MediumPurple"]
 
-for i in range(3, 11):
-    tim.pencolor(colors[i])
-    for _ in range(i):
-        tim.forward(100)
-        tim.right(360/i)
+for _ in range(100):
+    tim.pencolor(random.choice(colors))
+    tim.setheading(random.choice([0, 90, 180, 270]))
+    tim.forward(25)
 
 
 screen = Screen()
+
 screen.exitonclick()
