@@ -2,14 +2,15 @@ from turtle import Turtle, Screen
 
 tim = Turtle()
 tim.shape("turtle")
-
 tim.penup()
-tim.goto(-50, 50)
+tim.goto(-200, 0)
 tim.pendown()
 
-for _ in range(4):
-    tim.forward(100)
-    tim.rt(90)
+for _ in range(20):
+    tim.forward(10)
+    tim.penup()
+    tim.forward(10)
+    tim.pendown()
 
 
 
